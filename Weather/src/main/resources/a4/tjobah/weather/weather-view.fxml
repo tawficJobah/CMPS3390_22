@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="500.0" prefWidth="500.0" spacing="20.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a4.tjobah.weather.WeatherViewController">
+   <padding>
+       <Insets bottom="20" left="20" right="20" top="20" />
+   </padding>
+    <children>
+      <GridPane>
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="50.0" />
+          <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.0" />
+            <ColumnConstraints hgrow="SOMETIMES" percentWidth="25.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Location" />
+            <Label text="Latitude:" GridPane.columnIndex="1" />
+            <Label text="Longitude:" GridPane.columnIndex="2" />
+            <ComboBox fx:id="comboLoc" onAction="#onLocationChanged" prefHeight="26.0" prefWidth="220.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="Bakersfield,CA,USA" />
+                        <String fx:value="Las Vegas,NV,USA" />
+                    </FXCollections>
+                </items>
+            </ComboBox>
+            <Label fx:id="labLatitude" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="labLongitude" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+         </children>
+      </GridPane>
+   </children>
+</VBox>

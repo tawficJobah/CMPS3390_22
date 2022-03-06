@@ -1,0 +1,4 @@
+{
+  "apiKey": "5902f8a88261b1216a5b93765a33d290",
+  "geocodingURL": "http://api.openweathermap.org/geo/1.0/direct?q=%s&appid=%s"
+}
