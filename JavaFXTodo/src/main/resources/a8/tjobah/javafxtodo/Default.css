@@ -1,0 +1,29 @@
+.vbox, .button{
+    -fx-background-color: #c800ff;
+    -fx-text-fill: #ffffff
+}
+.list-cell:filled:selected:focused, .list-cell:filled:selected{
+       -fx-background-color: #4f74bd;
+        -fx-text-fill: #ffffff
+}
+.list-cell:odd{
+    -fx-background-color: #c188d1;
+}
+.list-cell:even{
+    -fx-background-color: #f0b8ff
+}
+.text-field {
+    -fx-background-color: #b69dbd;
+}
+.text-field:focused {
+    -fx-background-color: #d19be0;
+}
+.tab-pane .tab-header-area .tab-header-background {
+    -fx-background-color: #22002b;
+}
+.MyTabPane .tab {
+    -fx-background-insets: 0 1 0 1, 0, 0;
+}
+.MyTabPane .tab-pane .tab {
+    -fx-background-color: #e8e8e8;
+}
