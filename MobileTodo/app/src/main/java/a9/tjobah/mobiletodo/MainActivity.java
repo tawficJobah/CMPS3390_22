@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements OnItemListener {
         listItems.setAdapter(new RecycleAdapter(this,items,this));
         listItems.setLayoutManager(new LinearLayoutManager(this));
 
-        selectedTab = getResources().getString(R.string.work);
+        selectedTab = getResources().getString(R.string.home);
 
         tabLists.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override

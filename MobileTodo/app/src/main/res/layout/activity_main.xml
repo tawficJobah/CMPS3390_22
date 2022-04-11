@@ -4,6 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#E49292"
+    android:backgroundTint="#812A2A"
+    android:outlineAmbientShadowColor="#FF0000"
+    android:outlineSpotShadowColor="#FB0000"
     tools:context=".MainActivity">
 
     <EditText
@@ -16,6 +20,13 @@
         android:ems="10"
         android:hint="@string/todo_item"
         android:inputType="textPersonName"
+        android:outlineAmbientShadowColor="#FF0000"
+        android:outlineSpotShadowColor="#C5AAAA"
+        android:shadowColor="#8E7878"
+        android:textColor="#EA7777"
+        android:textColorHighlight="#FF0707"
+        android:textColorHint="#FFFFFF"
+        android:textColorLink="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnAdd"
         app:layout_constraintStart_toStartOf="parent" />
@@ -26,10 +37,18 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:background="#C65A5A"
+        android:backgroundTint="#E69292"
         android:onClick="onAddClicked"
+        android:outlineAmbientShadowColor="#C66666"
         android:text="@string/add"
+        android:textColor="#FF0000"
+        android:textColorHighlight="#BD7171"
+        android:textColorHint="#A35757"
+        android:textColorLink="#A85E5E"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:rippleColor="#D14646" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLists"
@@ -38,9 +57,24 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
+        android:background="#534040"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="#D63636"
+        app:tabRippleColor="#D86868"
+        app:tabSelectedTextColor="#AF0000"
+        app:tabTextColor="#B84A4A">
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/JavaClass" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/Gym" />
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -66,6 +100,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
+        android:outlineAmbientShadowColor="#934A4A"
+        android:outlineSpotShadowColor="#572323"
         app:layout_constraintBottom_toTopOf="@+id/txtTodoItem"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
