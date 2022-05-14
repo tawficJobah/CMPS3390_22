@@ -10,14 +10,14 @@
         <menus>
           <Menu mnemonicParsing="false" text="Inventory">
             <items>
-              <MenuItem mnemonicParsing="false" text="New" />
-                  <MenuItem mnemonicParsing="false" text="Edit" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
+              <MenuItem mnemonicParsing="false" onAction="#onNewItem" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#onEditItem" text="Edit" />
+                  <MenuItem mnemonicParsing="false" onAction="#onDeleteItem" text="Delete" />
             </items>
           </Menu>
         </menus>
       </MenuBar>
-      <GridPane>
+      <GridPane fx:id="newItem">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="120.0" minWidth="120.0" prefWidth="120.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -32,11 +32,12 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <TextField prefHeight="26.0" prefWidth="639.0" promptText="Product Name" GridPane.columnIndex="1" />
-            <TextField promptText="UPC Code" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <TextField promptText="Sales Price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <TextField promptText="Cost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <TextField promptText="Quantity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtProductName" prefHeight="26.0" prefWidth="639.0" promptText="Product Name" GridPane.columnIndex="1" />
+            <TextField fx:id="txtUPC" promptText="UPC Code" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtPrice" promptText="Sales Price" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtCost" promptText="Cost" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txtQuantity" promptText="Quantity" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtCategory" promptText="Category" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="Product Name:">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -57,12 +58,11 @@
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding></Label>
-            <TextField promptText="Catergory" GridPane.columnIndex="1" GridPane.rowIndex="5" />
             <Label text="Category:" GridPane.rowIndex="5">
                <padding>
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding></Label>
-            <Button maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <Button maxHeight="60.0" maxWidth="60.0" minHeight="60.0" minWidth="60.0" mnemonicParsing="false" onAction="#onSaveItem" prefHeight="60.0" prefWidth="60.0" text="Save" GridPane.columnIndex="2" GridPane.rowIndex="2" />
          </children>
       </GridPane>
       <ListView fx:id="itemsList" VBox.vgrow="ALWAYS">
