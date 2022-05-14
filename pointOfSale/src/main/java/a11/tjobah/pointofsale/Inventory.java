@@ -12,8 +12,10 @@ public class Inventory extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Inventory.class.getResource("list-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
+        ListViewController controller = fxmlLoader.getController();
         stage.setTitle("Inventory");
         stage.setScene(scene);
+        stage.setOnHidden(e -> controller.shutdown());
         stage.show();
     }
 

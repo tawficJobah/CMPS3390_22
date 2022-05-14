@@ -1,5 +1,7 @@
 package a11.tjobah.pointofsale;
 
+import org.json.JSONObject;
+
 public class Item {
     private String productName,upcCode,price,cost,quantity,category;
 
@@ -10,6 +12,25 @@ public class Item {
         this.cost = cost;
         this.quantity = quantity;
         this.category = category;
+    }
+    public Item(JSONObject item){
+        this.productName = item.getString("productName");
+        this.upcCode = item.getString("upcCode");
+        this.price = item.getString("price");
+        this.cost = item.getString("cost");
+        this.quantity = item.getString("quantity");
+        this.category = item.getString("category");
+    }
+
+    public String getJSONString(){
+        JSONObject json = new JSONObject();
+        json.put("productName",this.productName);
+        json.put("upcCode",this.upcCode);
+        json.put("price",this.price);
+        json.put("cost",this.price);
+        json.put("quantity",this.quantity);
+        json.put("category",this.category);
+        return json.toString();
     }
 
     public String getProductName() {
