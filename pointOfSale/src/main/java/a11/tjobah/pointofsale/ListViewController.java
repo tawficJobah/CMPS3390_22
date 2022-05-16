@@ -27,6 +27,9 @@ public class ListViewController {
 
     ItemComparator comparator = new ItemComparator();
 
+    /**
+     * iniitializes the objects
+     */
     @FXML
     public void initialize(){
         itemsList.setItems(items);
@@ -35,6 +38,10 @@ public class ListViewController {
         items.sort(comparator);
     }
 
+    /**
+     * reads a list from a JSON object and
+     * adds them into an array
+     */
     private void loadListFromJSON(){
         try(Scanner scanner = new Scanner(new File("items.json"))) {
             while(scanner.hasNextLine()){
@@ -48,6 +55,9 @@ public class ListViewController {
         } ;
     }
 
+    /**
+     * writes the array of items into a JSON object
+     */
     @FXML
     public void shutdown(){
         try(FileWriter file = new FileWriter("items.json")) {
@@ -62,11 +72,17 @@ public class ListViewController {
         }
     }
 
+    /**
+     * opens the listview to add new items
+     */
     @FXML
     protected void onNewItem(){
         setNewItemVis(true);
     }
 
+    /**
+     * saves items into list and sorts by category
+     */
     @FXML
     protected void onSaveItem(){
         Item tmp = new Item(txtProductName.getText(),txtUPC.getText(),txtPrice.getText(),
@@ -82,6 +98,9 @@ public class ListViewController {
         items.sort(comparator);
     }
 
+    /**
+     * deletes old item and allows you to edit
+     */
     @FXML
     protected void onEditItem(){
         Item selectedItem = itemsList.getSelectionModel().getSelectedItem();
@@ -96,6 +115,10 @@ public class ListViewController {
             onDeleteItem();
         }
     }
+
+    /**
+     * deletes selected item
+     */
     @FXML
     protected void onDeleteItem(){
         Item selectedItem = itemsList.getSelectionModel().getSelectedItem();
@@ -104,6 +127,10 @@ public class ListViewController {
         }
     }
 
+    /**
+     * hides or shows list view for adding or editing
+     * @param vis
+     */
     private void setNewItemVis(Boolean vis){
         newItem.setVisible(vis);
         newItem.setManaged(vis);

@@ -5,6 +5,15 @@ import org.json.JSONObject;
 public class Item {
     private String productName,upcCode,price,cost,quantity,category;
 
+    /**
+     * Constructor for Item
+     * @param productName
+     * @param upcCode
+     * @param price
+     * @param cost
+     * @param quantity
+     * @param category
+     */
     public Item(String productName, String upcCode, String price, String cost, String quantity, String category) {
         this.productName = productName;
         this.upcCode = upcCode;
@@ -13,6 +22,11 @@ public class Item {
         this.quantity = quantity;
         this.category = category;
     }
+
+    /**
+     * constructor for reading in JSON objects
+     * @param item
+     */
     public Item(JSONObject item){
         this.productName = item.getString("productName");
         this.upcCode = item.getString("upcCode");
@@ -22,6 +36,10 @@ public class Item {
         this.category = item.getString("category");
     }
 
+    /**
+     * creates a JSON object
+     * @return
+     */
     public String getJSONString(){
         JSONObject json = new JSONObject();
         json.put("productName",this.productName);

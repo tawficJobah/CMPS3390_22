@@ -9,6 +9,10 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class PosView {
+
+    //Couldnt figure out how to open two Scenes at once
+    //I wanted the POS to be open at the same time as Inventory
+
     private String productName,upcCode,price,cost,quantity,category;
 
     ObservableList<Item> items = FXCollections.observableArrayList();
