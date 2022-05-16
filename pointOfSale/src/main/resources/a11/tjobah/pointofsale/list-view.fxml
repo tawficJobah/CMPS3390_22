@@ -4,7 +4,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1" fx:controller="a11.tjobah.pointofsale.ListViewController">
+<VBox prefHeight="700.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="a11.tjobah.pointofsale.ListViewController">
    <children>
       <MenuBar>
         <menus>
